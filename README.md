@@ -1,2 +1,6 @@
-# SENECA_1.0
-El presente proyecto (aplicación de escritorio escrita en C#) se centra en dar respuesta a las necesidades que un departamento educativo precisa en un centro de enseñanza tanto de primaria como de secundaria. Dentro del mismo cabe desctacar como básica y fundamental la presencia del jefe de departamento junto con los profesores que pertenecen al mismo. En el estudio realizado para el montaje de la aplicación se recojen de forma concisa las actividades fundamentales que pueden darse en cualquier centro de enseñanza, las cuales quedan bien diferenciadas según el tipo de respuesta que se vaya a dar al usuario. 
+![PAVA](https://raw.githubusercontent.com/dazaca/SENECA_1.0/master/school.bmp)  
+
+## TSP (PAVA)
+
+C\# desktop application to manage teaching departments in schools and
+highschools.

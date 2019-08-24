@@ -3,4 +3,4 @@
 ## TSP (PAVA)
 
 C\# desktop application to manage teaching departments in schools and
-highschools.
+high schools.

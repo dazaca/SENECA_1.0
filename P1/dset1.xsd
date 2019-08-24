@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dset1" targetNamespace="http://tempuri.org/dset1.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dset1.xsd" xmlns:mstns="http://tempuri.org/dset1.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dset1" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="CONFIG">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ADMIN_ID" type="xs:string" minOccurs="0" />
+							<xs:element name="ADMIN_PASS" type="xs:string" minOccurs="0" />
+							<xs:element name="DEPT_NOMBRE" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PROFESOR">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_PROF" type="xs:string" minOccurs="0" />
+							<xs:element name="FOTOGRAFIA" type="xs:byte" />
+							<xs:element name="DNI" type="xs:string" minOccurs="0" />
+							<xs:element name="APELLIDOS" type="xs:string" minOccurs="0" />
+							<xs:element name="NOMBRE" type="xs:string" minOccurs="0" />
+							<xs:element name="FIJO" type="xs:string" minOccurs="0" />
+							<xs:element name="MOVIL" type="xs:string" minOccurs="0" />
+							<xs:element name="EMAIL" type="xs:string" minOccurs="0" />
+							<xs:element name="PASSWORD" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="G_ALUM">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_PROF" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_GRUPO" type="xs:string" minOccurs="0" />
+							<xs:element name="MATERIA" type="xs:string" minOccurs="0" />
+							<xs:element name="TUTORIA" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="CONFIG_PRIMARY_KEY" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CONFIG" />
+			<xs:field xpath="mstns:ADMIN_ID" />
+		</xs:key>
+		<xs:key name="PK_PROF" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:PROFESOR" />
+			<xs:field xpath="mstns:ID_PROF" />
+		</xs:key>
+		<xs:key name="PK_G_ALUM" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:G_ALUM" />
+			<xs:field xpath="mstns:ID_PROF" />
+			<xs:field xpath="mstns:ID_GRUPO" />
+			<xs:field xpath="mstns:MATERIA" />
+		</xs:key>
+		<xs:keyref name="G_ALUM-PROFESOR" refer="PK_PROF">
+			<xs:selector xpath=".//mstns:G_ALUM" />
+			<xs:field xpath="mstns:ID_PROF" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>
